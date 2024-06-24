@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "873574462153",
+    "project_id": "we-share-ride",
+    "storage_bucket": "we-share-ride.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873574462153:android:48cf6378ac889b6d549318",
+        "android_client_info": {
+          "package_name": "za.co.wethinkcode.widgets_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgAKslEEWYAw1_kTeT8f197fahDFUkzzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
