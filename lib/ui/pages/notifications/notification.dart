@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:lifts_app/ui/components/navbar.dart';
 import 'package:lifts_app/model/notification_model.dart' as custom;
 import 'package:lifts_app/viewmodels/notification_viewmodel.dart';
-import 'package:lifts_app/ui/pages/find_ride/accepted_ride_details.dart';
+import 'package:lifts_app/ui/pages/activities/accepted_ride_details.dart';
 
 class NotificationPage extends StatelessWidget {
   @override

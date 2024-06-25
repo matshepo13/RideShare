@@ -5,7 +5,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:lifts_app/model/notification_model.dart' as custom;
 import 'package:provider/provider.dart';
 import 'package:lifts_app/viewmodels/notification_viewmodel.dart';
-import 'package:lifts_app/ui/pages/find_ride/accepted_ride_details.dart'; // Import the AcceptedRideDetailPage
+import 'package:lifts_app/ui/pages/activities/accepted_ride_details.dart'; // Import the AcceptedRideDetailPage
 
 class RideDetailDialog extends StatelessWidget {
   final Lift lift;

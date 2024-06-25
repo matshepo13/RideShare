@@ -10,7 +10,7 @@ import 'package:lifts_app/viewmodels/notification_viewmodel.dart';
 import 'package:lifts_app/services/notification_service.dart';
 import 'package:lifts_app/viewmodels/created_lifts_viewmodel.dart';
 import 'package:lifts_app/ui/pages/offer_ride/created_lifts.dart';
-import 'package:lifts_app/ui/pages/find_ride/accepted_ride_details.dart'; // Adjust as per your actual path
+import 'package:lifts_app/ui/pages/activities/accepted_ride_details.dart'; // Adjust as per your actual path
 import 'package:lifts_app/model/lift_model.dart'; // Assuming Lift model is defined here
 
 

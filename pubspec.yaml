@@ -38,12 +38,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/logo.png
-    - assets/gmail.png
-    - assets/royal.png
-    - assets/wtc.JPG
-    - assets/pic.jpg
-    - assets/woman.jpg
-    - assets/driver.jpg
-    - assets/ping.mp3
-    - assets/image.png
+    - assets/
