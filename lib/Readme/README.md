@@ -1,104 +1,54 @@
-﻿Ridemates
+# Get a Lift
+GetLift is a ride-sharing app to help users especially students to save money on travel.
+Users can offer or search for lifts to specific places, making it easy to plan trips with friends, like a holiday.
+You can book or confirm if you're joining a ride and get details on where to meet, given the time, date and cost of the lift.
+This new feature aims to make travel cheaper and more fun for everyone.
+# Features
 
-Ridemates is a carpooling app designed to facilitate convenient and efficient carpooling by connecting drivers with spare seats to passengers looking for a lift to specific destinations. The app features include offering lifts, searching for available lifts, confirming participation, managing payments, and receiving notifications.
-Table of Contents
+Onboarding: this is where the user first interacts with the app (User authentication)
+• Log in ,Create Account and Forgot Password (Reset password)
+Offer a Lift:
+• Offer a new Lift by indicating your availability , address, cost and departere time & date and destination
+• Update Lift Details /delete
+• View Offered Lifts
+ Search for a Lift:
+• View/ search available Lifts by destination address
+• View Lift details
+Confirm or Cancel a Lift
+• Confirm and View confirmed or booked Lift
+• Cancel and view cancelled Lift (remove your self from the lift)
 
-    Features
-    Getting Started
-    App Structure
-    Challenges
-    Proud Moments
-    Contributing
-    License
+# Technologies Used
 
-Features
+UI Framework for the view:
+Flutter: The core UI framework for building natively compiled applications for mobile, web, and desktop from a single codebase.
 
-    Onboarding: Register, log in, reset password
-    Lift Management: Offer, update, view lift details
-    Lift Search and Join: Search for lifts, view lift details, confirm joining, cancel joining, cancel offered lifts
-    Notifications: Receive reminders and updates
-    Payment Management: Facilitate payments between drivers and passengers
+Styling and Themes:
+Flutter Material: Material design widgets and components.
 
-Getting Started
-Prerequisites
+UI Libraries:
+Flutter Lottie: For rendering animations (welcome screen).
 
-    Flutter SDK
-    Dart
-    Firebase account for backend services
+Routing:
+Flutter Navigator: Built-in navigation system.
+For the Controller
 
-Installation
+State Management:
+Provider: To notify the UI about changes in the model.
 
-    Clone the repository:
+Database:
+Firebase: Comprehensive suite of services including Firestore for database, Authentication, Cloud Functions, and more.
 
-    sh
+Push Notifications:
+Created Services responsibble for sending notifications
 
-git clone https://github.com/your-username/ridemates.git
-
-Navigate to the project directory:
-
-sh
-
-cd ridemates
-
-Install dependencies:
-
-sh
-
-flutter pub get
-
-Configure Firebase:
-
-    Follow the Firebase setup instructions for Flutter and add the necessary configuration files (google-services.json for Android and GoogleService-Info.plist for iOS).
-
-Run the app:
-
-sh
-
-    flutter run
-
-App Structure
-
-lib/
-│
-├── model/
-│   ├── booking.dart
-│   ├── lift.dart
-│   ├── lift_model.dart
-│   └── notification_model.dart
-│
-├── services/
-│   ├── auth_service.dart
-│   ├── firestore_service.dart
-│   └── notification_service.dart
-│
-├── ui/
-│   ├── components/
-│   └── pages/
-│       ├── activities/
-│       ├── find_ride/
-│       ├── introduction/
-│       ├── notifications/
-│       ├── offer_ride/
-│       ├── user_profile/
-│       └── main_page.dart
-│
-├── utilities/
-│   ├── app_constants.dart
-│   ├── form_validator.dart
-│   └── toast_helper.dart
-│
-├── viewmodels/
-│   ├── create_account_viewmodel.dart
-│   ├── created_lifts_viewmodel.dart
-│   ├── lifts_view_model.dart
-│   ├── notification_viewmodel.dart
-│   ├── profile_viewmodel.dart
-│   ├── reservation_viewmodel.dart
-│   └── ride_viewmodel.dart
-│
-├── firebase_config.dart
-├── main.dart
-└── README.md
+# Architecture
+MVC: The app follows the MVC (Model-View-Controller) ensuring separation of concerns and maintaining a clean and organized codebase.
+data: Contains data-related components following Clean Architecture principles:
+ui: User interface components:
+screens: RecyclerView adapters for displaying lifts in a listview
+viewmodels: ViewModels for managing UI-related data and logic.
+FIREBASE: used for user cloud authentication and data st
 
 Directory Descriptions
 
@@ -129,3 +79,6 @@ This project is licensed under the MIT License.
 ![alt text](<Screenshot from 2024-06-25 11-18-34.png>)
 ![alt text](<Screenshot from 2024-06-25 11-19-31.png>)
 ![alt text](<Screenshot from 2024-06-25 11-20-22.png>)
+![Screenshot from 2024-06-25 13-55-11](https://github.com/matshepo13/FinalWTC/assets/120104041/260e0377-92fa-4713-abd1-d474547e2ce3)
+
+
