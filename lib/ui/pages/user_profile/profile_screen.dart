@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lifts_app/ui/components/navbar.dart'; // Import the CustomBottomNavBar widget
 import 'package:lifts_app/ui/pages/user_profile/profile_info.dart'; // Import the ProfileInfoScreen
 import 'package:lifts_app/ui/pages/offer_ride/created_lifts.dart'; // Import the CreatedLiftsPage
+import 'package:lifts_app/ui/pages/activities/user_rides.dart';
+
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -60,17 +62,17 @@ class _ProfileScreenState extends State<ProfileScreen> { // Change this class na
                 ),
                 child: CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage('assets/woman.jpg'), // Use your image path
+                  backgroundImage: AssetImage('assets/driver.jpg'), // Use your image path
                 ),
               ),
               const SizedBox(height: 16),
               const Text(
-                'Matshepo',
+                'Tumi',
                 style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               const Text(
-                'tebogomatshepo@gmail.com',
+                'tumi@gmail.com',
                 style: TextStyle(color: Colors.grey, fontSize: 16),
               ),
               const SizedBox(height: 16),
@@ -82,7 +84,7 @@ class _ProfileScreenState extends State<ProfileScreen> { // Change this class na
                     _buildListTile(Icons.verified_user, 'Verification', context),
 
                     const SizedBox(height: 16), // Add space between list tiles
-                    _buildListTile(Icons.directions_car, 'Offered Lift', context),
+                    _buildListTile(Icons.directions_car, 'Ride History', context),
                     const SizedBox(height: 16), // Add space between list tiles
                     _buildListTile(Icons.emergency, 'Emergency Assistance', context),
                     const SizedBox(height: 16), // Add space between list tiles
@@ -126,8 +128,8 @@ class _ProfileScreenState extends State<ProfileScreen> { // Change this class na
   void _navigateToPage(String title, BuildContext context) {
     Widget page;
     switch (title) {
-      case 'Offered Lift':
-        page = CreatedLiftsPage(); // Navigate to CreatedLiftsPage
+      case 'Ride History':
+        page = UserRidesPage(); // Navigate to CreatedLiftsPage
         break;
       default:
         page = ProfileInfoScreen(); // Default to ProfileInfoScreen for other tiles

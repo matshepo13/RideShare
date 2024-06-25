@@ -5,7 +5,7 @@ import 'package:lifts_app/ui/components/gradient_button.dart'; // Ensure this pa
 import 'package:lifts_app/ui/components/navbar.dart'; // Ensure this path is correct
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
+import 'package:lifts_app/ui/pages/offer_ride/created_lifts.dart'; // Ensure this path is correct
 
 class RideShare extends StatefulWidget {
   @override
@@ -86,7 +86,7 @@ class _RideShareState extends State<RideShare> {
         sameGender: sameGender,
         isCardSelected: isCardSelected,
         amountPerSeat: amountPerSeat!,
-        userId: userId,  // Include userId here
+        userId: userId,
       );
 
       FirebaseFirestore.instance.collection('lifts').add(lift.toMap()).then((value) {
@@ -109,6 +109,30 @@ class _RideShareState extends State<RideShare> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF15203C),
+      appBar: AppBar(
+        title: Text(
+          'Create a Ride',
+          style: TextStyle(
+            foreground: Paint()
+              ..shader = LinearGradient(
+                colors: <Color>[Color(0xFF42A5F5), Color(0xFF1E88E5)],
+              ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0)),
+          ),
+        ),
+        backgroundColor: const Color(0xFF15203C),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.access_time),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CreatedLiftsPage()),
+              );
+            },
+            color: Colors.white,
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [

@@ -53,7 +53,7 @@ Column(
 crossAxisAlignment: CrossAxisAlignment.start,
 children: [
 Text(
-"Dapo T.",
+"Jacob Jones",
 style: TextStyle(fontSize: 18.0, color: Colors.white),
 ),
 Row(

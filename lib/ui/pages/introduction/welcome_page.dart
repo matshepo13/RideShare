@@ -84,7 +84,7 @@ class _WelcomePageState extends State<WelcomePage> with SingleTickerProviderStat
 
   Widget _buildDriverAvatar(Lift lift) {
     return Positioned(
-      top: 160,
+      top: 140,
       child: GestureDetector(
         onTap: () {
           setState(() {
