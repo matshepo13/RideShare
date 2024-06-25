@@ -52,15 +52,15 @@ FIREBASE: used for user cloud authentication and data st
 
 Directory Descriptions
 
-    model/: Contains data models used in the app.
-    services/: Contains service classes for authentication, database interactions, and notifications.
-    ui/: Contains UI components and pages for the app.
+    Model/: Contains data models used in the app.
+    Services/: Contains service classes for authentication, database interactions, and notifications.
+    Ui/: Contains UI components and pages for the app.
         components/: Reusable UI components.
         pages/: Pages representing different screens in the app.
-    utilities/: Utility classes and helpers.
-    viewmodels/: Contains ViewModel classes for managing state and logic.
-    firebase_config.dart: Configuration for Firebase.
-    main.dart: Entry point for the app.
+    Utilities/: Utility classes and helpers.
+    Viewmodels/: Contains ViewModel classes for managing state and logic.
+    Firebase_config.dart: Configuration for Firebase.
+    Main.dart: Entry point for the app.
     README.md: Project documentation.
 
 
