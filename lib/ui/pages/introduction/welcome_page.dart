@@ -3,6 +3,7 @@ import 'package:lifts_app/model/lift_model.dart';
 import 'package:lifts_app/services/firestore_service.dart';
 import 'package:lifts_app/ui/components/navbar.dart';
 import 'package:lifts_app/ui/pages/find_ride/ride_detail_page.dart'; // Ensure this import is correct
+import 'dart:async';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class _WelcomePageState extends State<WelcomePage> with SingleTickerProviderStat
   final FirestoreService _firestoreService = FirestoreService();
   List<Lift> _lifts = [];
   bool _isPopupVisible = false;
+  bool _showDrivers = false;
 
   @override
   void initState() {
@@ -29,6 +31,17 @@ class _WelcomePageState extends State<WelcomePage> with SingleTickerProviderStat
     List<Lift> lifts = await _firestoreService.getAvailableLifts();
     setState(() {
       _lifts = lifts;
+    });
+  }
+
+  void _startDriverDisplayTimer() {
+    setState(() {
+      _showDrivers = false;
+    });
+    Timer(Duration(seconds: 10), () {
+      setState(() {
+        _showDrivers = true;
+      });
     });
   }
 
@@ -55,7 +68,40 @@ class _WelcomePageState extends State<WelcomePage> with SingleTickerProviderStat
         child: Stack(
           children: [
             Positioned(
-              top: 200,
+              top: 20,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.lightBlue),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: TextField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            hintText: 'Where are you going?',
+                            hintStyle: TextStyle(color: Colors.white),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  IconButton(
+                    icon: Icon(Icons.search, color: Colors.lightBlue),
+                    onPressed: _startDriverDisplayTimer,
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              top: 150,
               child: Center(
                 child: Stack(
                   alignment: Alignment.center,
@@ -66,7 +112,7 @@ class _WelcomePageState extends State<WelcomePage> with SingleTickerProviderStat
                     _buildAnimatedCircle(160),
                     _buildAnimatedCircle(80),
                     // Display drivers' avatars
-                    if (!_isPopupVisible)
+                    if (!_isPopupVisible && _showDrivers)
                       ..._lifts.map((lift) => _buildDriverAvatar(lift)).toList(),
                   ],
                 ),

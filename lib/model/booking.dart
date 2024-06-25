@@ -1,3 +1,6 @@
+// Defines a Booking model with user ID, lift ID, and confirmation status, and a FirestoreService class
+// for managing booking data in Cloud Firestore by creating new booking documents.
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

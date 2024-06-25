@@ -1,3 +1,6 @@
+// AuthService provides methods for user authentication using email/password, Google sign-in,
+// and operations like signing out, resetting password, and deleting the user account.
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 

@@ -1,3 +1,6 @@
+// FirestoreService manages interactions with Firestore, including fetching and manipulating data
+// for lifts and bookings, and provides methods for creating, updating, and deleting lift and booking records.
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:lifts_app/model/lift_model.dart';

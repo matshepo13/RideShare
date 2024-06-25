@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:lifts_app/ui/pages/introduction/create_account_page.dart';
-import 'package:lifts_app/ui/pages/introduction/welcome_page.dart';
 import 'package:lifts_app/ui/pages/introduction/sign_in_page.dart';
 import 'package:lifts_app/ui/pages/main_page.dart';
 import 'package:lifts_app/ui/pages/notifications/notification.dart';
@@ -10,14 +9,15 @@ import 'package:lifts_app/viewmodels/notification_viewmodel.dart';
 import 'package:lifts_app/services/notification_service.dart';
 import 'package:lifts_app/viewmodels/created_lifts_viewmodel.dart';
 import 'package:lifts_app/ui/pages/offer_ride/created_lifts.dart';
-import 'package:lifts_app/ui/pages/activities/accepted_ride_details.dart'; // Adjust as per your actual path
-import 'package:lifts_app/model/lift_model.dart'; // Assuming Lift model is defined here
+import 'package:lifts_app/ui/pages/activities/accepted_ride_details.dart'; 
+import 'package:lifts_app/model/lift_model.dart'; 
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp();  
   runApp(MyApp());
+  //  initialize Firebase services
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Your App Name',
+        title: 'Ridemates',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
